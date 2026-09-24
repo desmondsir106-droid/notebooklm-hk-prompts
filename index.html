@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NotebookLM 溫習提示詞｜香港老師版</title>
+  <meta name="description" content="把筆記、講義、Past Paper 放進 NotebookLM，用下面八條指令當「私人補習」——適合課後輔導、考試前溫習、或派畀學生自行用。">
+  <meta property="og:title" content="NotebookLM 溫習提示詞｜香港老師版">
+  <meta property="og:description" content="把筆記、講義、Past Paper 放進 NotebookLM，用八條繁體中文指令做課後輔導與考前溫習。改編版本，非 Google 官方產品。">
+  <meta property="og:locale" content="zh_HK">
+  <meta name="theme-color" content="#f3efe6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230e6848'/%3E%3Crect x='8' y='6' width='16' height='20' rx='1.5' fill='%23f3efe6'/%3E%3Cpath d='M12 6v20' stroke='%23b64032' stroke-width='1.2'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&amp;family=Noto+Serif+TC:wght@700;900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#prompts">跳至八條指令</a>
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <p class="kicker">香港中學老師用</p>
+      <h1>NotebookLM 溫習提示詞｜香港老師版</h1>
+      <p class="lede">把筆記、講義、Past Paper 放進 NotebookLM，用下面八條指令當「私人補習」——適合課後輔導、考試前溫習、或派畀學生自行用。</p>
+      <p class="actions">
+        <a class="btn" href="https://notebooklm.google.com" target="_blank" rel="noopener">開啟 NotebookLM</a>
+        <a class="btn btn-ghost" href="#prompts">看八條指令</a>
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="about">
+          <h2 id="about-title">NotebookLM 是甚麼</h2>
+          <p>NotebookLM 是 Google 的筆記本工具。建立 Notebook，上載講義、筆記或 Past Paper，就可以按這些材料提問；也可以產生「音訊總覽」（Audio Overview），把筆記變成一段可聽的溫習對話。香港老師可以用來準備課後輔導、考試前溫習，或把指令交學生在自己的筆記本使用。</p>
+          <p><a href="https://notebooklm.google.com" target="_blank" rel="noopener">前往 notebooklm.google.com</a></p>
+        </div>
+        <h2 id="howto-title">用法</h2>
+        <ol class="steps">
+          <li>開 <a href="https://notebooklm.google.com" target="_blank" rel="noopener">NotebookLM</a>，建立 Notebook，上載【課題筆記／講義／Past Paper】（勿上載含姓名學號的學生功課）。</li>
+          <li>複製下方「完整指令」，把【】換成你的科目／課題。</li>
+          <li>先用匿名樣本試一次，再決定是否派畀學生。</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="banner" aria-labelledby="caution-title">
+      <div class="wrap">
+        <div class="banner-inner">
+          <h2 id="caution-title">使用注意</h2>
+          <p>學生資料請用代號（例如 S01）；AI 產出必須老師覆核，尤其是考題與答案；本頁屬改編，非 Google／原文作者官方產品。</p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="toc" aria-label="八條指令">
+      <div class="wrap">
+        <ol class="toc-list">
+          <li><a href="#guide"><span class="toc-num">01</span>即時溫習指南</a></li>
+          <li><a href="#socratic"><span class="toc-num">02</span>蘇格拉底小測</a></li>
+          <li><a href="#forecast"><span class="toc-num">03</span>試題焦點預測</a></li>
+          <li><a href="#fixer"><span class="toc-num">04</span>誤解拆解器</a></li>
+          <li><a href="#gaps"><span class="toc-num">05</span>知識缺口掃描</a></li>
+          <li><a href="#exam"><span class="toc-num">06</span>模擬試卷產生器</a></li>
+          <li><a href="#audio"><span class="toc-num">07</span>音訊溫習夥伴</a></li>
+          <li><a href="#teachback"><span class="toc-num">08</span>教返測試</a></li>
+        </ol>
+      </div>
+    </nav>
+
+    <section class="prompts" id="prompts" aria-labelledby="prompts-title">
+      <div class="wrap">
+        <div class="prompts-head">
+          <h2 id="prompts-title">八條溫習指令</h2>
+          <p>指令本身不限科目。個案例子按原稿保留，方便對照用法。</p>
+        </div>
+        <ol class="cards">
+
+        <li>
+          <article class="card" id="guide">
+            <header class="card-head">
+              <p class="num" aria-hidden="true">01</p>
+              <h3>即時溫習指南</h3>
+            </header>
+            <dl class="meta">
+              <div>
+                <dt>適用情境</dt>
+                <dd>測驗／考試前，想由講義快速產出「按課題整理」的溫習紙。</dd>
+              </div>
+              <div>
+                <dt>用法建議</dt>
+                <dd>貼上 NotebookLM 對話框；老師可先產出再精簡後派班，或指導學生自己跑。</dd>
+              </div>
+            </dl>
+            <div class="prompt-block">
+              <div class="prompt-bar">
+                <span>完整指令</span>
+                <button type="button" class="copy" aria-label="複製「即時溫習指南」指令" data-copy="prompt-guide" data-name="即時溫習指南" data-label="複製指令">複製指令</button>
+              </div>
+              <pre class="prompt" id="prompt-guide">請根據我上載的【科目／課題，例如：中五 BAFS 會計—調整分錄】全部來源，製作一份完整溫習指南。
+
+按課題分節，每一節必須包括：
+• 3 個核心概念（用香港中學課堂用語，簡短清晰）
+• 2 個常見誤解（說明錯因）
+• 2 條考試式題目（附參考答案與簡短評分要點）
+
+若來源不足，請先列明「你實際讀到的範圍」，再標出缺口。輸出用繁體中文。</pre>
+            </div>
+            <div class="case">
+              <strong>個案例子</strong>
+              <p>中六 BAFS，上載「公司會計」講義＋近兩年校內測卷 → 產出按「資產／負債／權益」分節的溫習指南，用作考前一堂溫習課。</p>
+            </div>
+            <div class="warn">
+              <strong>使用注意</strong>
+              <p>題目與答案必須對照課程綱要覆核；勿直接當公開試官方答案。</p>
+            </div>
+            <p class="src"><span class="src-label">來源</span>改編自 @AiWithIqra「1. Instant Study Guide」。<a href="https://x.com/Gemini_Notebook/status/2092021921202532421" target="_blank" rel="noopener">官方轉發</a><a href="https://x.com/AiWithIqra/status/2091481141824082066" target="_blank" rel="noopener">原文串</a></p>
+          </article>
+        </li>
+
+        <li>
+          <article class="card" id="socratic">
+            <header class="card-head">
+              <p class="num" aria-hidden="true">02</p>
+              <h3>蘇格拉底小測</h3>
+            </header>
+            <dl class="meta">
+              <div>
+                <dt>適用情境</dt>
+                <dd>一對一輔導或小組溫習，想逐步由淺入深檢查理解。</dd>
+              </div>
+              <div>
+                <dt>用法建議</dt>
+                <dd>學生回答後再貼下一問；老師可旁聽／覆核解釋是否正確。</dd>
+              </div>
+            </dl>
+            <div class="prompt-block">
+              <div class="prompt-bar">
+                <span>完整指令</span>
+                <button type="button" class="copy" aria-label="複製「蘇格拉底小測」指令" data-copy="prompt-socratic" data-name="蘇格拉底小測" data-label="複製指令">複製指令</button>
+              </div>
+              <pre class="prompt" id="prompt-socratic">你是【科目，例如：中五英文／中六經濟】的溫習導師。請就我上載來源中最重要的概念，用蘇格拉底式方法考我。
+
+規則：
+• 由基礎題開始，再逐步加深
+• 每題等我作答後，先給簡短回饋（對／部分對／錯），再解釋，然後出下一題
+• 每次只問一題
+• 用繁體中文；專有名詞可保留英文並附中文
+
+先確認你讀到的來源範圍，再出第一題。</pre>
+            </div>
+            <div class="case">
+              <strong>個案例子</strong>
+              <p>補課時學生溫「供求與彈性」——老師坐旁邊，NotebookLM 逐題問，老師負責糾正術語與圖表讀法。</p>
+            </div>
+            <div class="warn">
+              <strong>使用注意</strong>
+              <p>AI 解釋若與教科書定義不符，以課本／課程文件為準。</p>
+            </div>
+            <p class="src"><span class="src-label">來源</span>改編自「2. Socratic Quiz」；同上原文串。<a href="https://x.com/Gemini_Notebook/status/2092021921202532421" target="_blank" rel="noopener">官方轉發</a><a href="https://x.com/AiWithIqra/status/2091481141824082066" target="_blank" rel="noopener">原文串</a></p>
+          </article>
+        </li>
+
+        <li>
+          <article class="card" id="forecast">
+            <header class="card-head">
+              <p class="num" aria-hidden="true">03</p>
+              <h3>試題焦點預測</h3>
+            </header>
+            <dl class="meta">
+              <div>
+                <dt>適用情境</dt>
+                <dd>公開試／學期考前，從筆記與 past paper 找出高頻焦點。</dd>
+              </div>
+              <div>
+                <dt>用法建議</dt>
+                <dd>一定要上載 past paper 或校內測卷；單靠講義預測會偏弱。</dd>
+              </div>
+            </dl>
+            <div class="prompt-block">
+              <div class="prompt-bar">
+                <span>完整指令</span>
+                <button type="button" class="copy" aria-label="複製「試題焦點預測」指令" data-copy="prompt-forecast" data-name="試題焦點預測" data-label="複製指令">複製指令</button>
+              </div>
+              <pre class="prompt" id="prompt-forecast">請分析我上載的【科目／級別，例如：DSE 經濟 Paper 1／校內中五測卷】相關來源，預測最可能出現的溫習焦點。
+
+請列出：
+• Top 5 考試主題
+• 每個主題「為何重要」（對照來源中的出現頻率／分值線索）
+• 每個主題一條高難度練習題（附參考答法要點）
+
+清楚分開「來自來源的證據」與「你的推論」。用繁體中文輸出。</pre>
+            </div>
+            <div class="case">
+              <strong>個案例子</strong>
+              <p>中六經濟，上載筆記＋近三年校內 mock → 列出「市場結構／外部性」等焦點，作最後兩周溫習時間表。</p>
+            </div>
+            <div class="warn">
+              <strong>使用注意</strong>
+              <p>此為溫習優先次序參考，不是「必考題洩題」；勿對外宣傳為預測公開試。</p>
+            </div>
+            <p class="src"><span class="src-label">來源</span>改編自「3. Exam Forecaster」；同上原文串。<a href="https://x.com/Gemini_Notebook/status/2092021921202532421" target="_blank" rel="noopener">官方轉發</a><a href="https://x.com/AiWithIqra/status/2091481141824082066" target="_blank" rel="noopener">原文串</a></p>
+          </article>
+        </li>
+
+        <li>
+          <article class="card" id="fixer">
+            <header class="card-head">
+              <p class="num" aria-hidden="true">04</p>
+              <h3>誤解拆解器</h3>
+            </header>
+            <dl class="meta">
+              <div>
+                <dt>適用情境</dt>
+                <dd>學生說「呢題我唔明」時，用比喻＋例子＋常見錯再小測。</dd>
+              </div>
+              <div>
+                <dt>用法建議</dt>
+                <dd>把【概念】寫清楚；適合課後輔導或 WhatsApp 溫習時指導學生自用。</dd>
+              </div>
+            </dl>
+            <div class="prompt-block">
+              <div class="prompt-bar">
+                <span>完整指令</span>
+                <button type="button" class="copy" aria-label="複製「誤解拆解器」指令" data-copy="prompt-fixer" data-name="誤解拆解器" data-label="複製指令">複製指令</button>
+              </div>
+              <pre class="prompt" id="prompt-fixer">請用我上載的來源，解釋【概念，例如：機會成本／現值／光合作用光反應】。
+
+必須包括：
+• 一個簡單比喻（貼近香港中學生生活）
+• 一個真實／課堂例子
+• 一個常見錯誤（為何錯）
+然後出兩條短題測試我是否明白。
+
+用繁體中文。若來源沒有足夠內容，請先說明缺口。</pre>
+            </div>
+            <div class="case">
+              <strong>個案例子</strong>
+              <p>BAFS「折舊」——學生混淆直線法與餘額遞減法；跑完後再對照作業錯處。</p>
+            </div>
+            <div class="warn">
+              <strong>使用注意</strong>
+              <p>比喻只作理解輔助，評分仍按課程定義。</p>
+            </div>
+            <p class="src"><span class="src-label">來源</span>改編自「4. Confusion Fixer」；同上原文串。<a href="https://x.com/Gemini_Notebook/status/2092021921202532421" target="_blank" rel="noopener">官方轉發</a><a href="https://x.com/AiWithIqra/status/2091481141824082066" target="_blank" rel="noopener">原文串</a></p>
+          </article>
+        </li>
+
+        <li>
+          <article class="card" id="gaps">
+            <header class="card-head">
+              <p class="num" aria-hidden="true">05</p>
+              <h3>知識缺口掃描</h3>
+            </header>
+            <dl class="meta">
+              <div>
+                <dt>適用情境</dt>
+                <dd>考前自查：講義有冇漏、邊度最弱、點樣補。</dd>
+              </div>
+              <div>
+                <dt>用法建議</dt>
+                <dd>上載「應讀齊」的材料（課程大綱＋筆記）；可叫學生先跑再開輔導。</dd>
+              </div>
+            </dl>
+            <div class="prompt-block">
+              <div class="prompt-bar">
+                <span>完整指令</span>
+                <button type="button" class="copy" aria-label="複製「知識缺口掃描」指令" data-copy="prompt-gaps" data-name="知識缺口掃描" data-label="複製指令">複製指令</button>
+              </div>
+              <pre class="prompt" id="prompt-gaps">請閱讀我上載的【科目／課題】材料，找出學習缺口。
+
+請輸出：
+• 可能遺漏或交代不足的概念
+• 相對薄弱的部分（並說明判斷依據）
+• 每個缺口的「快速補課」說明（3–5 句）＋一條自測題
+
+用繁體中文。先列明你實際覆蓋的來源範圍。</pre>
+            </div>
+            <div class="case">
+              <strong>個案例子</strong>
+              <p>中五通識／公民科專題溫習——學生上載自己筆記，掃描後發現「數據詮釋」薄弱，老師安排一堂補數據題。</p>
+            </div>
+            <div class="warn">
+              <strong>使用注意</strong>
+              <p>「缺口」是相對上載材料而言；未上載的課本內容不會自動知道。</p>
+            </div>
+            <p class="src"><span class="src-label">來源</span>改編自「5. Gap Finder」；同上原文串。<a href="https://x.com/Gemini_Notebook/status/2092021921202532421" target="_blank" rel="noopener">官方轉發</a><a href="https://x.com/AiWithIqra/status/2091481141824082066" target="_blank" rel="noopener">原文串</a></p>
+          </article>
+        </li>
+
+        <li>
+          <article class="card" id="exam">
+            <header class="card-head">
+              <p class="num" aria-hidden="true">06</p>
+              <h3>模擬試卷產生器</h3>
+            </header>
+            <dl class="meta">
+              <div>
+                <dt>適用情境</dt>
+                <dd>快速出一套溫習用 mock（選擇＋短答＋長題），連參考答案。</dd>
+              </div>
+              <div>
+                <dt>用法建議</dt>
+                <dd>註明級別與時限；產出後老師必須篩題與改答案。</dd>
+              </div>
+            </dl>
+            <div class="prompt-block">
+              <div class="prompt-bar">
+                <span>完整指令</span>
+                <button type="button" class="copy" aria-label="複製「模擬試卷產生器」指令" data-copy="prompt-exam" data-name="模擬試卷產生器" data-label="複製指令">複製指令</button>
+              </div>
+              <pre class="prompt" id="prompt-exam">請根據我上載的【科目／級別／範圍，例如：中五 BAFS 必修—會計循環，45 分鐘】來源，出一份完整練習卷。
+
+結構：
+• 選擇題【8】條
+• 短題【4】條
+• 長題／論述【1】條
+
+每題附：參考答案＋簡短解釋／評分點。題目風格靠近香港中學／DSE 用語。用繁體中文。
+先說明出題所依據的來源範圍。</pre>
+            </div>
+            <div class="case">
+              <strong>個案例子</strong>
+              <p>科組溫習周——老師用講義＋舊卷風格出 45 分鐘練習，篩走超綱題後印給全級。</p>
+            </div>
+            <div class="warn">
+              <strong>使用注意</strong>
+              <p>不可未經覆核直接當正式測卷；分數權重與課程覆蓋須人手調整。</p>
+            </div>
+            <p class="src"><span class="src-label">來源</span>改編自「6. Practice Exam Generator」；同上原文串。<a href="https://x.com/Gemini_Notebook/status/2092021921202532421" target="_blank" rel="noopener">官方轉發</a><a href="https://x.com/AiWithIqra/status/2091481141824082066" target="_blank" rel="noopener">原文串</a></p>
+          </article>
+        </li>
+
+        <li>
+          <article class="card" id="audio">
+            <header class="card-head">
+              <p class="num" aria-hidden="true">07</p>
+              <h3>音訊溫習夥伴</h3>
+            </header>
+            <dl class="meta">
+              <div>
+                <dt>適用情境</dt>
+                <dd>用 NotebookLM「音訊總覽／Audio Overview」把筆記變成可聽的溫習 podcast。</dd>
+              </div>
+              <div>
+                <dt>用法建議</dt>
+                <dd>先整理好 Notebook 來源，再在介面產生音訊；本卡主要係使用步驟＋給 AI 的焦點指示。</dd>
+              </div>
+            </dl>
+            <div class="prompt-block">
+              <div class="prompt-bar">
+                <span>完整指令</span>
+                <button type="button" class="copy" aria-label="複製「音訊溫習夥伴」指令" data-copy="prompt-audio" data-name="音訊溫習夥伴" data-label="複製指令">複製指令</button>
+              </div>
+              <pre class="prompt" id="prompt-audio">（步驟）
+1. 確認 Notebook 已上載【溫習範圍】相關來源，並刪走無關檔。
+2. 在 NotebookLM 使用「音訊總覽／Audio Overview」產生對話式音訊。
+3. 若可加入自訂焦點，貼上下列文字：
+
+請聚焦【課題，例如：中六經濟—國民收入】，用兩個主持人口吻：
+• 先講 3 個必記概念
+• 再講 2 個考試常見陷阱
+• 最後給 3 條口述自測題（留空位讓我暫停作答）
+用語適合香港中六學生，繁體中文優先（若音訊只支援英文，則用簡單英文＋專有名詞）。</pre>
+            </div>
+            <div class="case">
+              <strong>個案例子</strong>
+              <p>學生乘車時聽「BAFS 比率分析」音訊總覽，回校後用第 8 卡做教返測試。</p>
+            </div>
+            <div class="warn">
+              <strong>使用注意</strong>
+              <p>音訊可能簡化或遺漏公式細節；計數題仍要用紙筆練。</p>
+            </div>
+            <p class="src"><span class="src-label">來源</span>改編自「7. Audio Study Partner」；同上原文串。<a href="https://x.com/Gemini_Notebook/status/2092021921202532421" target="_blank" rel="noopener">官方轉發</a><a href="https://x.com/AiWithIqra/status/2091481141824082066" target="_blank" rel="noopener">原文串</a></p>
+          </article>
+        </li>
+
+        <li>
+          <article class="card" id="teachback">
+            <header class="card-head">
+              <p class="num" aria-hidden="true">08</p>
+              <h3>教返測試</h3>
+            </header>
+            <dl class="meta">
+              <div>
+                <dt>適用情境</dt>
+                <dd>學生用自己的話教返一個概念，AI（或老師）指出對、漏、可改進處。</dd>
+              </div>
+              <div>
+                <dt>用法建議</dt>
+                <dd>學生先講／打字解釋，再貼指令；最啱輔導尾段檢查是否真係識。</dd>
+              </div>
+            </dl>
+            <div class="prompt-block">
+              <div class="prompt-bar">
+                <span>完整指令</span>
+                <button type="button" class="copy" aria-label="複製「教返測試」指令" data-copy="prompt-teachback" data-name="教返測試" data-label="複製指令">複製指令</button>
+              </div>
+              <pre class="prompt" id="prompt-teachback">我將用自己的話解釋【概念】。請只根據我上載的來源來評核。
+
+我的解釋：
+【在此貼上學生的口述稿／文字】
+
+請回覆：
+• 正確之處
+• 遺漏之處（對照來源）
+• 如何改進（具體、可執行）
+• 最後出一條跟進短題
+
+用繁體中文；語氣鼓勵但準確。</pre>
+            </div>
+            <div class="case">
+              <strong>個案例子</strong>
+              <p>輔導結束前，學生教返「邊際成本」；AI 指出漏咗「額外一單位」定義，老師再補圖。</p>
+            </div>
+            <div class="warn">
+              <strong>使用注意</strong>
+              <p>若學生解釋與來源無關的內容，應標為「來源未驗證」，勿當正確。</p>
+            </div>
+            <p class="src"><span class="src-label">來源</span>改編自「8. Teach-Back Test」；同上原文串。<a href="https://x.com/Gemini_Notebook/status/2092021921202532421" target="_blank" rel="noopener">官方轉發</a><a href="https://x.com/AiWithIqra/status/2091481141824082066" target="_blank" rel="noopener">原文串</a></p>
+          </article>
+        </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>本頁八條指令改編自 @AiWithIqra 的學習提示詞，並參考 <a href="https://x.com/Gemini_Notebook/status/2092021921202532421" target="_blank" rel="noopener">Gemini Notebook 官方帳號轉發</a>。中文改寫成香港中學老師的溫習用法（課後輔導、考試前、派畀學生），並非逐字翻譯，亦非 Google 或原文作者的官方產品。</p>
+      <p>來源：<a href="https://x.com/Gemini_Notebook/status/2092021921202532421" target="_blank" rel="noopener">官方轉發</a>　<a href="https://x.com/AiWithIqra/status/2091481141824082066" target="_blank" rel="noopener">原文串 @AiWithIqra</a></p>
+    </div>
+  </footer>
+  <div class="sr-only" id="copy-status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
